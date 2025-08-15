@@ -1,0 +1,46 @@
+{
+  "name": "shanduko-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supabase/auth-helpers-nextjs": "^0.10.0",
+    "@supabase/supabase-js": "^2.39.0",
+    "canvas-confetti": "^1.9.2",
+    "clsx": "^2.1.0",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.367.0",
+    "mapbox-gl": "^3.3.0",
+    "next": "^14.2.31",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "react-dropzone": "^14.2.3",
+    "react-leaflet": "^4.2.1",
+    "recharts": "^2.12.0",
+    "tailwind-merge": "^2.3.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/canvas-confetti": "^1.6.4",
+    "@types/leaflet": "^1.9.8",
+    "@types/node": "^20.12.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@types/uuid": "^9.0.8",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.4.0"
+  }
+}

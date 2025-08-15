@@ -1,0 +1,67 @@
+{
+  "name": "Shanduko - Water Quality Monitoring",
+  "short_name": "Shanduko",
+  "description": "Community-driven water quality monitoring for Lake Chivero and Zimbabwe",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0066CC",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["environment", "monitoring", "utilities"],
+  "screenshots": [
+    {
+      "src": "/screenshots/dashboard.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Water Quality Dashboard"
+    },
+    {
+      "src": "/screenshots/mobile-dashboard.png",
+      "sizes": "360x640",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile Dashboard"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Dashboard",
+      "short_name": "Dashboard",
+      "description": "Check current water quality readings",
+      "url": "/dashboard",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Report Issue",
+      "short_name": "Report",
+      "description": "Report a water quality issue",
+      "url": "/reports/new",
+      "icons": [
+        {
+          "src": "/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

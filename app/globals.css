@@ -1,0 +1,244 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-900 px-4 py-2 rounded-lg font-medium hover:bg-gray-300 transition-colors;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg border shadow-sm p-4;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Mapbox GL styles */
+@import url('https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css');
+
+/* Leaflet styles */
+@import url('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');
+
+/* Custom map marker styles */
+.custom-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.marker-dot {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out;
+}
+
+/* PWA specific styles */
+@media (display-mode: standalone) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Responsive design helpers */
+@media (max-width: 768px) {
+  .mobile-padding {
+    @apply px-4;
+  }
+  
+  .mobile-text {
+    @apply text-sm;
+  }
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card {
+    @apply border-2 border-gray-800;
+  }
+  
+  .btn-primary {
+    @apply border-2 border-blue-800;
+  }
+}
+
+/* Toast notification styles */
+.toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.toast {
+  @apply bg-white border border-gray-200 rounded-lg shadow-lg p-4 mb-2 pointer-events-auto;
+  animation: slideUp 0.3s ease-out;
+}
+
+.toast.success {
+  @apply border-green-200 bg-green-50;
+}
+
+.toast.error {
+  @apply border-red-200 bg-red-50;
+}
+
+.toast.warning {
+  @apply border-yellow-200 bg-yellow-50;
+}
+
+/* Loading states */
+.skeleton {
+  @apply bg-gray-200 animate-pulse rounded;
+}
+
+.spinner {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Chart customizations */
+.recharts-tooltip-wrapper {
+  @apply outline-none;
+}
+
+.recharts-tooltip-content {
+  @apply bg-white border border-gray-200 rounded-lg shadow-lg;
+}
+
+/* Form improvements */
+.form-group {
+  @apply space-y-2;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.form-error {
+  @apply text-red-600 text-sm;
+}
+
+.form-help {
+  @apply text-gray-500 text-sm;
+}
+
+/* Badge styles */
+.badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-blue {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.badge-green {
+  @apply bg-green-100 text-green-800;
+}
+
+.badge-yellow {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.badge-red {
+  @apply bg-red-100 text-red-800;
+}
+
+.badge-gray {
+  @apply bg-gray-100 text-gray-800;
+}
+
+/* Utility classes */
+.text-balance {
+  text-wrap: balance;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
