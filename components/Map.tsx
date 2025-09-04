@@ -35,19 +35,6 @@ export default function Map({ readings, preferences, selectedMetric }: MapProps)
     };
 
     initMap();
-
-    // Cleanup function to properly dispose of map instances
-    return () => {
-      if (map.current) {
-        if (useMapbox) {
-          map.current.remove();
-        } else {
-          map.current.remove();
-        }
-        map.current = null;
-        setMapLoaded(false);
-      }
-    };
   }, [useMapbox, mapLoaded]);
 
   // Update map data when readings change
